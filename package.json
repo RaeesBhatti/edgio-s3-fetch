@@ -1,0 +1,23 @@
+{
+  "name": "aws-v4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@edgio/cli": "^7.7.2",
+    "@edgio/core": "^7.7.2",
+    "@edgio/devtools": "^7.7.2",
+    "@edgio/prefetch": "^7.7.2"
+  },
+  "dependencies": {
+    "aws4fetch": "^1.0.17",
+    "crypto-js": "^4.2.0",
+    "whatwg-url": "^14.0.0"
+  }
+}
