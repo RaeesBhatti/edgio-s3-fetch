@@ -4,16 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "edgio": "edgio"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@edgio/cli": "^7.7.2",
-    "@edgio/core": "^7.7.2",
-    "@edgio/devtools": "^7.7.2",
-    "@edgio/prefetch": "^7.7.2"
+    "@edgio/cli": "^7.7.6",
+    "@edgio/core": "^7.7.6",
+    "@edgio/devtools": "^7.7.6",
+    "@edgio/prefetch": "^7.7.6"
   },
   "dependencies": {
     "aws4fetch": "^1.0.17",

@@ -1,7 +1,5 @@
-import {AwsV4Signer} from './awsv4';
-import {URL} from 'whatwg-url';
-
-global.URL = URL;
+import {AwsV4Signer} from './libs/awsv4';
+import {EdgioNonStandardUrl} from './libs/edgio-url';
 
 /**
  * An example edge function which forwards the request to the origin.
@@ -9,7 +7,10 @@ global.URL = URL;
  */
 
 export async function handleHttpRequest(request, context) {
-    const s3Url = new URL(request.path, 'https://edgio-test-v4-123235ews.s3.us-east-1.amazonaws.com/');
+    const s3Url = new EdgioNonStandardUrl(request.url);
+    s3Url.hostname = 'edgio-test-v4-b9519dd23a7f.s3.us-east-1.amazonaws.com';
+    s3Url.port = '';
+    s3Url.protocol = 'https:';
 
     const signer = new AwsV4Signer({
         url: s3Url.href,

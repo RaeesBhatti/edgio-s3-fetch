@@ -45,19 +45,19 @@ module.exports = {
       name: "s3",
 
       // Use the following to override the host header sent from the browser when connecting to the origin
-      override_host_header: "edgio-test-v4-123235ews.s3.us-east-1.amazonaws.com",
+      override_host_header: "edgio-test-v4-b9519dd23a7f.s3.us-east-1.amazonaws.com",
 
       // The list of origin hosts to which to connect
       hosts: [
         {
           // The domain name or IP address of the origin server
-          location: "edgio-test-v4-123235ews.s3.us-east-1.amazonaws.com",
+          location: "edgio-test-v4-b9519dd23a7f.s3.us-east-1.amazonaws.com",
         },
       ],
 
       tls_verify: {
         use_sni: true,
-        sni_hint_and_strict_san_check: "edgio-test-v4-123235ews.s3.us-east-1.amazonaws.com",
+        sni_hint_and_strict_san_check: "edgio-test-v4-b9519dd23a7f.s3.us-east-1.amazonaws.com",
       },
 
       // Uncomment the following to configure a shield

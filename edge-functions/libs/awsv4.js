@@ -1,5 +1,5 @@
 // @ts-check
-
+import {EdgioNonStandardUrl} from './edgio-url';
 import HmacSHA256 from 'crypto-js/hmac-sha256';
 import SHA256 from 'crypto-js/sha256';
 
@@ -7,8 +7,6 @@ import SHA256 from 'crypto-js/sha256';
  * @license MIT <https://opensource.org/licenses/MIT>
  * @copyright Michael Hart 2022
  */
-
-const encoder = new TextEncoder()
 
 /** @type {Object.<string, string>} */
 const HOST_SERVICES = {
@@ -170,7 +168,7 @@ export class AwsV4Signer {
         if (secretAccessKey == null) throw new TypeError('secretAccessKey is a required option')
 
         this.method = method || (body ? 'POST' : 'GET')
-        this.url = new URL(url)
+        this.url = new EdgioNonStandardUrl(url)
         this.headers = new Headers(headers || {})
         this.body = body
 
@@ -262,7 +260,7 @@ export class AwsV4Signer {
     /**
      * @returns {Promise<{
      *   method: string
-     *   url: URL
+     *   url: EdgioNonStandardUrl
      *   headers: Headers
      *   body?: BodyInit | null
      * }>}
